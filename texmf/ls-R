@@ -1,0 +1,24 @@
+% ls-R -- filename database for kpathsea; do not change this line.
+./:
+.:
+ls-R
+tex
+
+
+./tex:
+context
+latex
+
+./tex/context:
+asymptote
+
+./tex/context/asymptote:
+colo-asy.tex
+
+./tex/latex:
+asymptote
+
+./tex/latex/asymptote:
+asycolors.sty
+asymptote.sty
+latexmkrc
