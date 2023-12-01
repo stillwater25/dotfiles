@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# DO NOT RUN THIS SCRIPT AS ROOT!!!
+
 echo "Installing yay..."
 # yay
 git clone https://aur.archlinux.org/yay-git.git
@@ -116,6 +118,10 @@ cp -r sounds ~/.sounds
 cp -r wallpapers ~/
 cp -r scripts ~/.scripts
 cp -r texmf ~/.texmf; sudo texhash
+
+# CREATE PYTHON VENV
+echo "Creating a virtual environment for Python..."
+python -m venv ~/.venv
 
 # ENABLE SYSTEMD SERVICES
 sudo systemctl enable NetworkManager.service
