@@ -4,11 +4,11 @@
 
 echo "Installing yay..."
 # yay
-git clone https://aur.archlinux.org/yay-git.git
-cd yay
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
 makepkg -si 
 cd ..
-rm -rf yay
+rm -rf yay-bin
 
 # basic stuff
 yay -S socat wayland wayland-utils blueman bluez bluez-utils pipewire pipewire-alsa wireplumber python base-devel pipewire-jack pipewire-pulse polkit-kde-agent plymouth brightnessctl pamixer playerctl lxappearance cronie timeshift task thermald tlp tlp-rdw inxi meson ninja mlocate lolcat ufw gufw unzip udiskie --needed --noconfirm
