@@ -37,6 +37,10 @@ yay -S ttf-ms-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra 
 # pacman stuff
 yay -S pacgraph pacman-contrib --needed --noconfirm 
 
+# first fetch signing keys for eww wayland 
+curl -sS https://github.com/elkowar.gpg | gpg --import -i -
+curl -sS https://github.com/web-flow.gpg | gpg --import -i -
+
 # status bars, wallpaper
 yay -S eww-wayland swww-git hyprpaper --needed --noconfirm
 
