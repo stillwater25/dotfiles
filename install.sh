@@ -119,7 +119,7 @@ echo "Copying files..."
 # COPY FILES
 mkdir -p ~/.local/bin
 mkdir -p ~/.config
-cp -r config ~/.config 
+cp -r config/* ~/.config 
 cp -r local/notify-log ~/.local/bin/notify-log
 cp -r latexmkrc ~/.latexmkrc
 cp -r bashrc ~/.bashrc
