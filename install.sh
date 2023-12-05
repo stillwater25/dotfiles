@@ -14,7 +14,7 @@ cd ..
 rm -rf yay-bin
 
 # rustup
-yay -S rustup
+yay -S rustup; rustup default stable
 
 # basic stuff
 yay -S socat wayland wayland-utils blueman bluez bluez-utils pipewire pipewire-alsa wireplumber python base-devel pipewire-jack pipewire-pulse polkit-kde-agent plymouth brightnessctl pamixer playerctl lxappearance cronie timeshift task thermald tlp tlp-rdw inxi meson ninja mlocate lolcat ufw gufw unzip udiskie --needed --noconfirm
