@@ -2,6 +2,9 @@
 
 echo "DO NOT RUN THIS SCRIPT AS ROOT!!!"
 
+echo "Updating the system..."
+sudo pacman -Syu
+
 echo "Installing yay..."
 # yay
 git clone https://aur.archlinux.org/yay-bin.git
@@ -9,6 +12,9 @@ cd yay-bin
 makepkg -si 
 cd ..
 rm -rf yay-bin
+
+# rustup
+yay -S rustup
 
 # basic stuff
 yay -S socat wayland wayland-utils blueman bluez bluez-utils pipewire pipewire-alsa wireplumber python base-devel pipewire-jack pipewire-pulse polkit-kde-agent plymouth brightnessctl pamixer playerctl lxappearance cronie timeshift task thermald tlp tlp-rdw inxi meson ninja mlocate lolcat ufw gufw unzip udiskie --needed --noconfirm
@@ -29,7 +35,7 @@ yay -S stacer-bin --needed --noconfirm
 yay -S ttf-ms-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono-nerd ttf-jetbrains-mono ttf-iosevka-nerd ttf-inconsolata ttf-inconsolata-nerd --needed --noconfirm
 
 # pacman stuff
-yay -S pacgraph pacman-contrib informant --needed --noconfirm 
+yay -S pacgraph pacman-contrib --needed --noconfirm 
 
 # status bars, wallpaper
 yay -S eww-wayland swww-git hyprpaper --needed --noconfirm
