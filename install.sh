@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# DO NOT RUN THIS SCRIPT AS ROOT!!!
+echo "DO NOT RUN THIS SCRIPT AS ROOT!!!"
 
 echo "Installing yay..."
 # yay
@@ -21,6 +21,9 @@ yay -S nemo thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman 
 
 # networking
 yay -S gping networkmanager network-manager-applet nm-connection-editor httpie broadcom-wl-dkms reflector --needed --noconfirm
+
+# monitoring and cleanup
+yay -S stacer-bin --needed --noconfirm
 
 # fonts
 yay -S ttf-ms-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono-nerd ttf-jetbrains-mono ttf-iosevka-nerd ttf-inconsolata ttf-inconsolata-nerd --needed --noconfirm
