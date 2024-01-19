@@ -140,3 +140,5 @@ alias shutdown="shutdown now"
 alias sudo='sudo '
 
 (source /usr/share/nvm/init-nvm.sh &) &> /dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

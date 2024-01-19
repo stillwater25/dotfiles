@@ -1,7 +1,7 @@
-#
 # ~/.bashrc
 #
-
+#[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
+#
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -46,3 +46,13 @@ extract() {
     done
     return "$e"
 }
+
+# ALIASES
+alias von="python -m von"
+alias ls="lsd"
+
+export TERM=xterm-256color
+export DMBROWSER=firefox-nightly
+
+eval "$(starship init bash)"
+#[[ ${BLE_VERSION-} ]] && ble-attach

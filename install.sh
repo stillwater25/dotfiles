@@ -8,9 +8,9 @@ sudo pacman -Syu
 echo "Installing yay..."
 # yay
 git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si 
-cd ..
+cd yay-bin || exit
+makepkg -si
+cd ../
 rm -rf yay-bin
 
 # rustup
@@ -143,10 +143,7 @@ sudo systemctl enable reflector.service
 sudo systemctl enable tlp.service
 sudo systemctl enable sddm.service
 sudo systemctl enable ufw.service
-sudo systemctl enable pipewire.service
-sudo systemctl enable pipewire-pulse.service
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cronie.service
-sudo systemctl enable wireplumber.service
 
 echo "You may now reboot!"

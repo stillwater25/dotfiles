@@ -41,7 +41,7 @@ function fish_greeting
     set_color normal
     set_color --italics $fish_color_host
     printf @
-    printf $(hostname)
+    printf ArchMajestic
     set_color $fish_color_greeting
     printf "! You are filled with "
     set_color --bold $fish_color_determination
@@ -116,6 +116,8 @@ export SHELL='/usr/bin/fish'
 export EDITOR='nvim'
 export LIBVA_DRIVER_NAME=i965
 export VDPAU_DRIVER=va_gl
+export TERM=xterm-256color
+export DMBROWSER=firefox-nightly
 
 # the auto prompt-edited detection is not enabled somehow
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -130,9 +132,6 @@ if test -f /usr/bin/zathura
     export PDFVIEWER='zathura'
 end
 
-if test -f /usr/bin/nvim
-    alias vim='nvim'
-end
 if test -f /usr/bin/nvim-qt
     alias gvim='nvim-qt'
 end
@@ -141,6 +140,7 @@ if test -f /usr/bin/delta
 else
     alias diff='diff --color' # show differences in color
 end
+
 
 # Aliases
 alias cp='cp -i'
@@ -166,17 +166,28 @@ alias fuzzy=fzf
 alias cat=bat
 alias ping=gping
 alias hibernate='systemctl hibernate'
-#alias pipesh="pipes.sh -r 0 -R -K -f 100"
+alias pipesh="pipes.sh -r 0 -R -K -f 100"
 alias todo="task ready"
 alias ls="lsd"
 alias toascii="ascii-image-converter"
 alias todo='task ready'
 alias code="vscodium"
 alias nlog="nvim ~/.log/notify.log"
+alias eui="edex-ui"
+alias npim="nvim --noplugin"
+alias googler="BROWSER=lynx /usr/bin/googler"
+alias parrot="terminal-parrot"
+
+# the terminal rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# Mocp must be launched with bash instead of Fish!
+alias mocp="bash -c mocp"
 
 # Path exports
-fish_add_path export ~/.venv/bin
+fish_add_path export /home/cheecho/.venv/bin
 fish_add_path export ~/.venv/lib/python3.11/site-packages
+fish_add_path export /opt/nightly
 fish_add_path export ~/.local/bin
 
 # pikaur hack to automatically disable virtualenvs
@@ -487,3 +498,6 @@ status is-interactive && tabs -4 # https://github.com/jorgebucaran/fisher/issues
 # vim: fdm=marker
 
 thefuck --alias | source
+
+# starship init fish | source
+

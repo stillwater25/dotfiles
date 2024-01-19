@@ -1,5 +1,5 @@
 #!/bin/bash
-SOUND_FILE="~/.sounds/linuxmint/notification.oga"
+SOUND_FILE="/home/cheecho/.sounds/linuxmint/notification.oga"
 
 # Check if the sound file exists
 if [ -f "$SOUND_FILE" ]; then 

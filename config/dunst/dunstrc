@@ -326,7 +326,7 @@
 
 [play_sound]
     summary = "*"
-    script = ~/.scripts/notification_sound.sh
+    script = /home/cheecho/.scripts/notification_sound.sh
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

@@ -53,6 +53,7 @@
 !_TAG_KIND_DESCRIPTION!Tex	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Tex	t,theorem	/theorem created with \\newtheorem/
 !_TAG_KIND_DESCRIPTION!Tex	u,subsection	/subsections/
+!_TAG_KIND_DESCRIPTION!Yaml	a,anchor	/anchors/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
@@ -63,6 +64,7 @@
 !_TAG_PARSER_VERSION!SCSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PARSER_VERSION!Tex	0.0	/current.age/
+!_TAG_PARSER_VERSION!Yaml	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROC_CWD	/home/cheecho/dotfiles/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
@@ -74,6 +76,7 @@
 !_TAG_ROLE_DESCRIPTION!Tex!xinput	bibliography	/bibliography (.bib) file/
 !_TAG_ROLE_DESCRIPTION!Tex!xinput	included	/external input file specified with \\include/
 !_TAG_ROLE_DESCRIPTION!Tex!xinput	input	/external input file specified with \\input/
+!_TAG_ROLE_DESCRIPTION!Yaml!anchor	alias	/alias/
 Autologin	sddm.conf	/^[Autologin]$/;"	s
 CompositorCommand	sddm.conf	/^CompositorCommand=weston --shell=fullscreen-shell.so$/;"	k	section:Wayland
 Current	sddm.conf	/^Current=sugar-dark$/;"	k	section:Theme
@@ -116,6 +119,7 @@ SessionLogFile	sddm.conf	/^SessionLogFile=.local\/share\/sddm\/wayland-session.l
 SessionLogFile	sddm.conf	/^SessionLogFile=.local\/share\/sddm\/xorg-session.log$/;"	k	section:X11
 Theme	sddm.conf	/^[Theme]$/;"	s
 ThemeDir	sddm.conf	/^ThemeDir=\/usr\/share\/sddm\/themes$/;"	k	section:Theme
+Usage	config/alacritty/old_config/catppuccin/README.md	/^## Usage$/;"	s
 Usage	config/rofi/README.md	/^## Usage$/;"	s
 User	sddm.conf	/^User=$/;"	k	section:Autologin
 Users	sddm.conf	/^[Users]$/;"	s
@@ -143,65 +147,6 @@ batbar	config/eww/bar/eww.scss	/^.batbar {$/;"	c
 battery	config/eww/bar/scripts/battery	/^battery() {$/;"	f
 battery_display	config/neofetch/config.conf	/^battery_display="off"$/;"	k
 battery_stat	config/eww/bar/scripts/battery	/^battery_stat() {$/;"	f
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 0, movetoworkspace, 10$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 1, movetoworkspace, 1$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 2, movetoworkspace, 2$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 3, movetoworkspace, 3$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 4, movetoworkspace, 4$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 5, movetoworkspace, 5$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 6, movetoworkspace, 6$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 7, movetoworkspace, 7$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 8, movetoworkspace, 8$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, 9, movetoworkspace, 9$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod SHIFT, E, movetoworkspace, empty$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 0, workspace, 10$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 1, workspace, 1$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 2, workspace, 2$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 3, workspace, 3$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 4, workspace, 4$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 5, workspace, 5$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 6, workspace, 6$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 7, workspace, 7$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 8, workspace, 8$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, 9, workspace, 9$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, A, exec, . grimblast --notify copysave area$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, B, exec, qutebrowser$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, C, killactive, $/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, EQUAL, workspace, e+1 $/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, F, fullscreen, 0$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, L, exec, . $HOME\/.scripts\/lock$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, M, centerwindow$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, MINUS, workspace, e-1$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, N, exec, firefox-nightly$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, P, pseudo, # dwindle$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, Q, exit, $/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, RETURN, exec, alacritty$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, S, togglesplit, # dwindle$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, T, exec, nemo$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, TAB, exec, . $HOME\/.config\/rofi\/launcher$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, X, togglefloating, $/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, down, movefocus, d$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, e, workspace, empty$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, left, movefocus, l$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, right, movefocus, r$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $mainMod, up, movefocus, u$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, E, exec, evince$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, G, exec, geogebra$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, H, exec, systemctl hibernate$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, L, exec, lock;systemctl suspend $/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, S, exec, systemctl suspend$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = $subMod, Z, exec, zathura$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86AudioLowerVolume, exec, pamixer -d 10$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86AudioMute, exec, pamixer -t$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86AudioRaiseVolume, exec, pamixer -i 10$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86MonBrightnessDown, exec, brightnessctl set 10%-$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = , XF86MonBrightnessUp, exec, brightnessctl set +10%$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = SUPER,SPACE,changegroupactive$/;"	k
-bind	config/hypr/hyprland.conf	/^bind = SUPER,g,togglegroup$/;"	k
-bindm	config/hypr/hyprland.conf	/^bindm = $mainMod, mouse:272, movewindow$/;"	k
-bindm	config/hypr/hyprland.conf	/^bindm = $mainMod, mouse:273, resizewindow$/;"	k
-bindm	config/hypr/hyprland.conf	/^bindm = CTRL, mouse:272, pass mouse:273$/;"	k
 block_height	config/neofetch/config.conf	/^block_height=1$/;"	k
 block_range	config/neofetch/config.conf	/^block_range=(0 15)$/;"	k
 block_width	config/neofetch/config.conf	/^block_width=3$/;"	k
@@ -215,7 +160,6 @@ cal	config/eww/bar/eww.scss	/^.cal {$/;"	c
 cal-in	config/eww/bar/eww.scss	/^  .cal-in {$/;"	c
 calendar	config/eww/bar/scripts/pop	/^calendar() {$/;"	f
 catimg_size	config/neofetch/config.conf	/^catimg_size="2"$/;"	k
-clamp	config/hypr/scripts/change-active-workspace	/^function clamp {$/;"	f
 clock_date_class	config/eww/bar/eww.scss	/^.clock_date_class {$/;"	c
 clock_minute_class	config/eww/bar/eww.scss	/^.clock_minute_class {$/;"	c
 clock_time_class	config/eww/bar/eww.scss	/^.clock_time_class {$/;"	c
@@ -251,21 +195,6 @@ dotfiles	README.md	/^# dotfiles$/;"	c
 dtos-sounds	sounds/.sounds/dtos/README.org	/^* dtos-sounds$/;"	p
 dtos-sounds	sounds/dtos/README.org	/^* dtos-sounds$/;"	p
 editor	config/networkmanager-dmenu/config.ini	/^[editor]$/;"	s
-env	config/hypr/hyprland.conf	/^env = GLFW_IM_MODULE,ibus$/;"	k
-env	config/hypr/hyprland.conf	/^env = GTK_IM_MODULE,fcitx$/;"	k
-env	config/hypr/hyprland.conf	/^env = HYPRLAND_LOG_WLR,1$/;"	k
-env	config/hypr/hyprland.conf	/^env = QT_AUTO_SCREEN_SCALE_FACTOR,1$/;"	k
-env	config/hypr/hyprland.conf	/^env = QT_IM_MODULE,fcitx$/;"	k
-env	config/hypr/hyprland.conf	/^env = QT_QPA_PLATFORM,wayland;xcb$/;"	k
-env	config/hypr/hyprland.conf	/^env = QT_QPA_PLATFORMTHEME,qt5ct$/;"	k
-env	config/hypr/hyprland.conf	/^env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1$/;"	k
-env	config/hypr/hyprland.conf	/^env = SDL_IM_MODULE,fcitx$/;"	k
-env	config/hypr/hyprland.conf	/^env = XCURSOR_SIZE,24$/;"	k
-env	config/hypr/hyprland.conf	/^env = XCURSOR_THEME,Bibata-Modern-Classic$/;"	k
-env	config/hypr/hyprland.conf	/^env = XDG_CURRENT_DESKTOP,Hyprland$/;"	k
-env	config/hypr/hyprland.conf	/^env = XDG_SESSION_DESKTOP,Hyprland$/;"	k
-env	config/hypr/hyprland.conf	/^env = XDG_SESSION_TYPE,wayland$/;"	k
-env	config/hypr/hyprland.conf	/^env = XMODIFIERS,@im=fcitx$/;"	k
 flamingo	config/eww/bar/eww.scss	/^$flamingo: #f2cdcd;$/;"	v
 gap	config/neofetch/config.conf	/^gap=3$/;"	k
 get_album	config/eww/bar/scripts/music_info	/^get_album() {$/;"	f
@@ -312,7 +241,6 @@ mic_text	config/eww/bar/eww.scss	/^.mic_text {$/;"	c
 module	config/eww/bar/eww.scss	/^.module {$/;"	c
 module-wif	config/eww/bar/eww.scss	/^.module-wif {$/;"	c
 module_essid	config/eww/bar/eww.scss	/^.module_essid {$/;"	c
-monitor	config/hypr/hyprland.conf	/^monitor=,preferred,auto,1$/;"	k
 mpc_args	config/neofetch/config.conf	/^mpc_args=()$/;"	k
 music	config/eww/bar/eww.scss	/^.music {$/;"	c
 music	config/eww/bar/scripts/pop	/^music() {$/;"	f
@@ -329,18 +257,6 @@ music_player	config/neofetch/config.conf	/^music_player="auto"$/;"	k
 music_pop	config/eww/bar/eww.scss	/^.music_pop {$/;"	c
 nmdm	config/networkmanager-dmenu/config.ini	/^[nmdm]$/;"	s
 occupied	config/eww/bar/eww.scss	/^.workspace-entry.occupied {$/;"	c
-once	config/hypr/hyprland.conf	/^exec-once = [workspace 1 silent] nemo$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = [workspace 2 silent] firefox-nightly$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = [workspace 3 silent] joplin-desktop$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = [workspace 4 silent] discord$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = [workspace 5 silent] env LD_PRELOAD=\/usr\/lib\/spotify-adblock.so spotify$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = \/usr\/lib\/polkit-kde-authentication-agent-1$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = bat cache --build$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = dunst $/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = notify-log $HOME\/.log\/notify.log$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = pw-play ~\/.sounds\/dtos\/startup-01.mp3$/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = swww init; swww img ~\/wallpapers\/default.png --transition-step 20 --transition-fps/;"	k
-once	config/hypr/hyprland.conf	/^exec-once = ~\/.config\/eww\/launch_bar$/;"	k
 os_arch	config/neofetch/config.conf	/^os_arch="on"$/;"	k
 overlay0	config/eww/bar/eww.scss	/^$overlay0: #6c7086;$/;"	v
 overlay1	config/eww/bar/eww.scss	/^$overlay1: #7f849c;$/;"	v
@@ -348,7 +264,6 @@ overlay2	config/eww/bar/eww.scss	/^$overlay2: #9399b2;$/;"	v
 package_managers	config/neofetch/config.conf	/^package_managers="on"$/;"	k
 peach	config/eww/bar/eww.scss	/^$peach: #fab387;$/;"	v
 pink	config/eww/bar/eww.scss	/^$pink: #f5c2e7;$/;"	v
-preload	config/hypr/hyprpaper.conf	/^preload = ~\/wallpapers\/default.png$/;"	k
 printbuf	local/notify-log	/^printbuf() {$/;"	f
 procmsg	local/notify-log	/^procmsg() {$/;"	f
 public_ip_host	config/neofetch/config.conf	/^public_ip_host="http:\/\/ident.me"$/;"	k
@@ -372,8 +287,6 @@ song_btn_prev	config/eww/bar/eww.scss	/^.song_btn_prev,$/;"	c
 song_cover_art	config/eww/bar/eww.scss	/^.song_cover_art {$/;"	c
 song_format	config/neofetch/config.conf	/^song_format="%artist% - %album% - %title%"$/;"	k
 song_shorthand	config/neofetch/config.conf	/^song_shorthand="off"$/;"	k
-source	config/hypr/hyprland.conf	/^source = ~\/.config\/hypr\/mocha.conf$/;"	k
-spaces	config/hypr/scripts/get-workspaces	/^spaces (){$/;"	f
 speaker_bar	config/eww/bar/eww.scss	/^.speaker_bar scale trough highlight {$/;"	c
 speaker_bar	config/eww/bar/eww.scss	/^.speaker_bar scale trough {$/;"	c
 speaker_icon	config/eww/bar/eww.scss	/^.speaker_icon {$/;"	c
@@ -418,14 +331,7 @@ underline_enabled	config/neofetch/config.conf	/^underline_enabled="on"$/;"	k
 uptime_shorthand	config/neofetch/config.conf	/^uptime_shorthand="on"$/;"	k
 volbar	config/eww/bar/eww.scss	/^.volbar trough highlight {$/;"	c
 volume_icon	config/eww/bar/eww.scss	/^.volume_icon {$/;"	c
-wallpaper	config/hypr/hyprpaper.conf	/^wallpaper = LVDS-1,~\/wallpapers\/arc.png		# monitor name can be seen using hyprctl monitor$/;"	k
 wifi_chars	config/networkmanager-dmenu/config.ini	/^wifi_chars = ▂▄▆█$/;"	k	section:dmenu
-windowrule	config/hypr/hyprland.conf	/^windowrule = workspace 1, ^(nemo)\$$/;"	k
-windowrule	config/hypr/hyprland.conf	/^windowrule = workspace 2, ^(firefox-nightly)\$$/;"	k
-windowrule	config/hypr/hyprland.conf	/^windowrule = workspace 3, ^(Joplin)\$$/;"	k
-windowrule	config/hypr/hyprland.conf	/^windowrule = workspace 4, ^(discord)\$$/;"	k
-windowrule	config/hypr/hyprland.conf	/^windowrule = workspace 5, ^(Spotify)\$$/;"	k
-windowrulev2	config/hypr/hyprland.conf	/^windowrulev2 = tile, class:^(Spotify)\$$/;"	k
 works	config/eww/bar/eww.scss	/^.works {$/;"	c
 workspace-entry	config/eww/bar/eww.scss	/^.workspace-entry {$/;"	c
 workspace-entry	config/eww/bar/eww.scss	/^.workspace-entry.current {$/;"	c
@@ -435,4 +341,6 @@ workspaces	config/eww/bar/scripts/workspace	/^workspaces() {$/;"	f
 xoffset	config/neofetch/config.conf	/^xoffset=0$/;"	k
 yellow	config/eww/bar/eww.scss	/^$yellow: #f9e2af;$/;"	v
 yoffset	config/neofetch/config.conf	/^yoffset=0$/;"	k
+💝 Thanks to	config/alacritty/old_config/catppuccin/README.md	/^## 💝 Thanks to$/;"	s
 💝 Thanks to	config/rofi/README.md	/^## 💝 Thanks to$/;"	s
+🙋 FAQ	config/alacritty/old_config/catppuccin/README.md	/^## 🙋 FAQ$/;"	s
