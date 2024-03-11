@@ -42,7 +42,7 @@ curl -sS https://github.com/elkowar.gpg | gpg --import -i -
 curl -sS https://github.com/web-flow.gpg | gpg --import -i -
 
 # status bars, wallpaper
-yay -S eww-wayland swww-git hyprpaper --needed --noconfirm
+yay -S eww-git swww-git hyprpaper --needed --noconfirm
 
 # Terminal applications
 yay -S gdu lsd ranger bat bat-extras fzf htop neofetch --needed --noconfirm
