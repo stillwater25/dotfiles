@@ -1,16 +1,16 @@
 [colors.primary]
-background = "#1E1E2E"
-foreground = "#CDD6F4"
+background = "#010101"
+foreground = "#5EFE00"
 dim_foreground = "#CDD6F4"
-bright_foreground = "#CDD6F4"
+bright_foreground = "#5EFE00"
 
 [colors.cursor]
-text = "#1E1E2E"
-cursor = "#F5E0DC"
+text = "#FF0000"
+cursor = "#5EFE00"
 
 [colors.vi_mode_cursor]
-text = "#1E1E2E"
-cursor = "#B4BEFE"
+text = "#FF0000"
+cursor = "#5EFE00"
 
 [colors.search.matches]
 foreground = "#1E1E2E"
@@ -37,20 +37,20 @@ text = "#1E1E2E"
 background = "#F5E0DC"
 
 [colors.normal]
-black = "#45475A"
-red = "#F38BA8"
+black = "#010101"
+red = "#FF0000"
 green = "#A6E3A1"
-yellow = "#F9E2AF"
+yellow = "#5EFE00"
 blue = "#89B4FA"
 magenta = "#F5C2E7"
 cyan = "#94E2D5"
 white = "#BAC2DE"
 
 [colors.bright]
-black = "#585B70" # surface2
-red = "#FB93B0" # red
-green = "#AEECA9" # green
-yellow = "#FFEAB7" # yellow
+black = "#101010" # surface2
+red = "#FF0000" # red
+green = "#90EE90" # green
+yellow = "#FFF44F" # yellow
 blue = "#91BCFF" # blue
 magenta = "#FDCAEF" # pink
 cyan = "#9CEADD" # teal

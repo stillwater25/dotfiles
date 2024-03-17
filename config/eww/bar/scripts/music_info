@@ -4,10 +4,11 @@
 
 ## Get data
 TMP_DIR="$HOME/.cache/eww"
+PLAYER="spotify"
 
 ## Is active
 is_active() {
-	if [[ -z "$(playerctl -ps spotify status)" ]]; then
+	if [[ -z "$(playerctl -ps ${PLAYER} status)" ]]; then
 		echo "false"
 	else
 		echo "true"
@@ -17,7 +18,7 @@ is_active() {
 
 ## Get status
 get_status() {
-	playerctl -p spotify --follow status | while read -r player_status; do
+	playerctl -p ${PLAYER} --follow status | while read -r player_status; do
 		if [[ "$player_status" == *"Playing"* ]]; then
 			echo "󰏦"
 		else
@@ -28,7 +29,7 @@ get_status() {
 
 ## Get song
 get_song() {
-	playerctl -p spotify --follow metadata xesam:title | while read -r song; do
+	playerctl -p ${PLAYER} --follow metadata xesam:title | while read -r song; do
 		if [[ -n "$song" ]]; then
 			echo "$song"
 		fi
@@ -37,7 +38,7 @@ get_song() {
 
 ## Get artist
 get_artist() {
-	playerctl -p spotify --follow metadata xesam:artist | while read -r artist; do
+	playerctl -p ${PLAYER} --follow metadata xesam:artist | while read -r artist; do
 		if [[ -n "$artist" ]]; then
 			echo "$artist"
 		fi
@@ -46,7 +47,7 @@ get_artist() {
 
 ## Get album
 get_album() {
-	playerctl -p spotify --follow metadata xesam:album | while read -r album; do
+	playerctl -p ${PLAYER} --follow metadata xesam:album | while read -r album; do
 		if [[ -n "$album" ]]; then
 			echo "$album"
 		fi
@@ -55,10 +56,10 @@ get_album() {
 
 ## Get time
 get_time() {
-	playerctl -p spotify --follow metadata --format "{{position}} {{mpris:length}}" | while read -r position length; do
+	playerctl -p ${PLAYER} --follow metadata --format "{{position}} {{mpris:length}}" | while read -r position length; do
 		#echo "$position"
-		#echo "$(playerctl -p spotify position)"
-		#echo "$(playerctl -p spotify metadata "mpris:length")"
+		#echo "$(playerctl -p ${PLAYER} position)"
+		#echo "$(playerctl -p ${PLAYER} metadata "mpris:length")"
 		atime=$(echo "print \$(($position * 100.0 / $length))" | zsh)
 		if [[ -n "$atime" ]]; then
 			echo "$atime"
@@ -68,13 +69,13 @@ get_time() {
 
 ## Set time
 set_time() {
-	new_time=$(printf 'echo $((%f * $(playerctl -p spotify metadata "mpris:length") / 100000000.0))\n' "$1" | zsh)
-	playerctl -p spotify position "$new_time"
+	new_time=$(printf 'echo $((%f * $(playerctl -p ${PLAYER} metadata "mpris:length") / 100000000.0))\n' "$1" | zsh)
+	playerctl -p ${PLAYER} position "$new_time"
 }
 
 ## Get cover
 get_cover() {
-	playerctl -p spotify --follow metadata mpris:artUrl | while read -r cover; do
+	playerctl -p ${PLAYER} --follow metadata mpris:artUrl | while read -r cover; do
 		# Check if the file has a embbeded album art
 		if [[ -n "$cover" ]]; then
 			id=$(sha1sum <<<"$cover")
@@ -105,11 +106,11 @@ elif [[ "$1" == "--position" ]]; then
 elif [[ "$1" == "--cover" ]]; then
 	get_cover
 elif [[ "$1" == "--toggle" ]]; then
-	playerctl -p spotify play-pause
+	playerctl -p ${PLAYER} play-pause
 elif [[ "$1" == "--next" ]]; then
-	playerctl -p spotify next
+	playerctl -p ${PLAYER} next
 elif [[ "$1" == "--prev" ]]; then
-	playerctl -p spotify previous
+	playerctl -p ${PLAYER} previous
 elif [[ "$1" == "--active" ]]; then
 	is_active
 fi
