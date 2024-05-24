@@ -1,27 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-pathmunge () {
-  if ! echo $PATH | grep -E -q "(^|:)$1($|:)" ; then
-    if [ "$2" = "after" ] ; then
-      PATH=$PATH:$1
-    else
-      PATH=$1:$PATH
-    fi
-  fi
-}
-
-
-pathmunge $HOME/.scripts after
-pathmunge $HOME/.local/bin after
-export BAT_THEME="Catppuccin-mocha"
-export EDITOR="nvim"
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-# not cool enough for vim
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="nvim"
+
+# Insult me :)
+if [ -f /etc/bash.command-not-found ]; then
+	. /etc/bash.command-not-found
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -89,9 +76,18 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions colored-man-pages)
+plugins=(git
+    archlinux
+    rsync
+    extract
+    zsh-interactive-cd
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-completions
+    zsh-vi-mode
+    colored-man-pages)
 
-source $ZSH
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -104,22 +100,11 @@ source $ZSH
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 eval $(thefuck --alias)
+eval $(atuin init zsh)
 
 autoload -Uz promptinit
 promptinit
@@ -137,8 +122,18 @@ alias sl="sl -e"
 alias von="python -m von"
 alias rm="rmtrash"
 alias shutdown="shutdown now"
+alias cppw="c++ -Wall -Wextra -Werror -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op -fsanitize=undefined"
 alias sudo='sudo '
 
 (source /usr/share/nvm/init-nvm.sh &) &> /dev/null
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

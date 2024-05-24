@@ -12,8 +12,14 @@ rm -rf ${BASEDIR}/zshrc
 rm -rf ${BASEDIR}/texmf
 rm -rf ${BASEDIR}/bashrc
 
+mkdir ${BASEDIR}/config
+
 # Copy files
-cp -r ~/.config ${BASEDIR}/config
+for elem in starship.toml geogebra hypr rofi nvim alacritty kitty doom eww systemd zathura neofetch
+do
+    cp -R ~/.config/$elem ${BASEDIR}/config
+done
+
 cp -r ~/.texmf ${BASEDIR}/texmf
 cp -r  ~/.scripts/ ${BASEDIR}/scripts
 cp -r /usr/local/bin/snapbackup.sh ${BASEDIR}/scripts

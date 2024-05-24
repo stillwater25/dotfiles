@@ -7,7 +7,11 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias sl='sl -e'
+
 PS1='[\u@\h \W]\$ '
+
+# FUNCTIONS
 
 shopt -s extglob
 
@@ -47,12 +51,49 @@ extract() {
     return "$e"
 }
 
+cl() {
+	local dir="$1"
+	local dir="${dir:=$HOME}"
+	if [[ -d "$dir" ]]; then
+		cd "$dir" >/dev/null; ls
+	else
+		echo "bash: cl: $dir: Directory not found"
+	fi
+}
+
+note () {
+    # if file doesn't exist, create it
+    if [[ ! -f $HOME/.notes ]]; then
+        touch "$HOME/.notes"
+    fi
+
+    if ! (($#)); then
+        # no arguments, print file
+        cat "$HOME/.notes"
+    elif [[ "$1" == "-c" ]]; then
+        # clear file
+        printf "%s" > "$HOME/.notes"
+    else
+        # add all arguments to file
+        printf "%s\n" "$*" >> "$HOME/.notes"
+    fi
+}
+
+calc() {
+    echo "scale=3;$@" | bc -l
+}
+
 # ALIASES
 alias von="python -m von"
 alias ls="lsd"
+alias cppw="c++ -Wall -Wextra -Werror -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op -fsanitize=undefined"
 
 export TERM=xterm-256color
 export DMBROWSER=firefox-nightly
 
 eval "$(starship init bash)"
+eval "$(atuin init bash)"
 #[[ ${BLE_VERSION-} ]] && ble-attach
+
+source /home/cheecho/.config/broot/launcher/bash/br
+[[ -f /usr/share/bash-preexec/bash-preexec.sh ]] && source /usr/share/bash-preexec/bash-preexec.sh

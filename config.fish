@@ -112,6 +112,10 @@ function fish_right_prompt_loading_indicator -a last_prompt
     echo -n (set_color brblack)"$uncolored_last_prompt"(set_color normal)
 end
 
+thefuck --alias | source
+zoxide init fish | source
+atuin init fish | source
+
 export SHELL='/usr/bin/fish'
 export EDITOR='nvim'
 export LIBVA_DRIVER_NAME=i965
@@ -145,12 +149,14 @@ end
 # Aliases
 alias cp='cp -i'
 alias mv='mv -i'
+alias cd='z'
 alias less='less -R' # less should detect colors correctly
+alias man='batman'
 alias egrep='egrep --color=auto' # show differences in color
 alias fgrep='fgrep --color=auto' # show differences in color
 alias pip='pip3' #gd ubuntu
 alias python='python3' #gd ubuntu
-alias von='/usr/bin/python3 -m von'
+alias von='cd ~/Von; /usr/bin/python3 -m von'
 alias tsqx='/usr/bin/python3 ~/pyscripts/tsqx/tsqx.py'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias gvim='nvim-qt'
@@ -171,15 +177,23 @@ alias todo="task ready"
 alias ls="lsd"
 alias toascii="ascii-image-converter"
 alias todo='task ready'
-alias code="vscodium"
+alias code="codium"
 alias nlog="nvim ~/.log/notify.log"
 alias eui="edex-ui"
 alias npim="nvim --noplugin"
 alias googler="BROWSER=lynx /usr/bin/googler"
 alias parrot="terminal-parrot"
+alias ranger="yazi"
+alias vale="vale --config='$HOME/.config/vale/.vale.ini'"
+alias cppw="c++ -Wall -Wextra -Werror -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op -fsanitize=undefined"
+
+# OTIS alias
+alias xook="echo xonk"
+alias cook="echo keep xooking"
+alias pong="echo ping"
 
 # the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+#alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Mocp must be launched with bash instead of Fish!
 alias mocp="bash -c mocp"
@@ -189,6 +203,8 @@ fish_add_path export /home/cheecho/.venv/bin
 fish_add_path export ~/.venv/lib/python3.11/site-packages
 fish_add_path export /opt/nightly
 fish_add_path export ~/.local/bin
+fish_add_path export ~/.config/emacs/bin
+fish_add_path export ~/.cargo/bin
 
 # pikaur hack to automatically disable virtualenvs
 function pikaur
@@ -331,7 +347,7 @@ function pdf -w zathura
     else if test -f "$argv.pdf"
         dn zathura "$argv.pdf" &>/dev/null
     else
-        echo "Cannot found a suitable file."
+        echo "Cannot find a suitable file."
     end
 end
 
@@ -388,11 +404,11 @@ if test (uname) = Linux
     function ll
         if test (count *) -gt 1024
             # grep is going to choke anyways, so just list stuff
-            ls -l --block-size=K --color=yes $argv
+            ls -l $argv
             return
         end
         if test (count *.tex) -eq 0
-            ls -l --block-size=K --color=yes $argv
+            ls -l $argv
             return
         end
         set --function regex '('(string join '|' (string sub --end=-5 (string escape --style=regex *.tex)))')'
@@ -495,9 +511,8 @@ end
 
 status is-interactive && tabs -4 # https://github.com/jorgebucaran/fisher/issues/747
 
+# starship init fish | source
+if test -f /home/cheecho/.autojump/share/autojump/autojump.fish; . /home/cheecho/.autojump/share/autojump/autojump.fish; end
 # vim: fdm=marker
 
-thefuck --alias | source
-
-# starship init fish | source
-
+fish_add_path /home/cheecho/.spicetify
