@@ -107,7 +107,10 @@ yay -S tldr-git yt-dlp bandwhich dmscripts-git urlview msmtp neomutt --needed --
 yay -S cmatrix sl ascii-rain-git asciiquarium ascii-image-converter-git --needed --noconfirm
 
 # latex 
-yay -S geogebra-5 texlive-core texlive texlive-bin texlive-binextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-games texlive-latex texlive-latexextra texlive-latexrecommended texlive-luatex texlive-mathscience texlive-music texlive-pictures texlive-basic asymptote --noconfirm --needed
+yay -S texlive-core texlive texlive-bin texlive-binextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-games texlive-latex texlive-latexextra texlive-latexrecommended texlive-luatex texlive-mathscience texlive-music texlive-pictures texlive-basic asymptote --noconfirm --needed
+
+# geogebra
+# yay -S geogebra
 
 #pdf viewers
 yay -S zathura evince zathura-pdf-poppler zathura-cb zathura-djvu zathura-ps --noconfirm --needed
